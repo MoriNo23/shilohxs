@@ -1,0 +1,323 @@
+---
+import "../styles/global.css";
+import Aboutme from "../components/Aboutme.astro";
+import Friends from "../components/Friends.astro";
+---
+
+<!doctype html>
+<html lang="TR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      href="https://fonts.googleapis.com/css?family=Knewave:regular"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Jaini+Purva:regular"
+      rel="stylesheet"
+    />
+    <title>szascetisme-space</title>
+  </head>
+  <body>
+    <p class="font-[Jaini_Purva] text-[#aaa] w-[345px] text-center md:w-200 md:flex md:justify-between">
+      Hüzün <span>/</span> Aşk <span>/</span> Hasret <span>/</span> Dert <span
+        >/</span
+      > Yalnızlık
+    </p>
+    <section
+      class="relative bg-[#3B1C32] w-[345px] h-[143px] rounded-3xl mt-10 flex justify-center md:w-200"
+    >
+      <span class="font-[Knewave] text-[47px] absolute -top-10"
+        >szascetisme</span
+      >
+    </section>
+    <p
+      class="font-[Jaini_Purva] w-[345px] text-[64px] text-center flex gap-2 justify-center md:w-200"
+    >
+      <span>Shiloh</span><span>☪</span><span>Amorosa</span>
+    </p>
+    <video controls class="min-w-86 w-[345px] h-auto z-111 mask-y-from-70% mask-y-to-90% hover:mask-y-from-100% :hover:mask-y-to-100% md:w-200" autoplay>
+      <source src="public/videoplayback.mp4" type="video/mp4" />
+      Tu navegador no soporta la etiqueta video.
+    </video>
+    <main
+      class="bg-[linear-gradient(180deg,#0000,#3b1c32,#0e0e0e)] w-[345px] h-[380px] bottom-0 md:w-200"
+    >
+      <nav class="flex gap-5 w-[345px] mx-auto -bottom-3 relative md:w-200 md:mx-0">
+        <div id="about" class="nav-item">
+          <svg
+            width="50px"
+            height="34px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11.7501 6.40636C10.2698 6.40636 10.1222 6.5625 9.3561 6.5625C8.71769 6.5625 6.80245 5 5.84485 5C4.88724 5 3.77004 5.5625 3.77004 7.1875V9.0625C3.77197 9.55469 3.95081 11.0634 4.65075 10.6602C3.82323 11.6382 3.73963 12.7786 3.751 13.8826C3.52812 13.947 3.30072 14.0196 3.08003 14.095C2.39614 14.3289 1.67085 14.6271 1.3432 14.8387C0.995241 15.0634 0.895339 15.5277 1.12006 15.8756C1.34478 16.2236 1.80903 16.3235 2.15698 16.0988C2.3132 15.9979 2.87823 15.7493 3.56532 15.5144C3.64124 15.4884 3.71731 15.4631 3.79298 15.4386C3.83925 15.8724 3.95408 16.2684 4.12478 16.6292L4.1012 16.6416C3.69148 16.8581 3.3113 17.1067 3.06889 17.2652C3.02694 17.2926 2.98912 17.3173 2.95599 17.3387C2.60803 17.5634 2.50813 18.0277 2.73285 18.3756C2.95757 18.7236 3.42182 18.8235 3.76978 18.5988C3.8109 18.5722 3.85472 18.5436 3.90097 18.5134C4.1463 18.3533 4.45999 18.1485 4.80199 17.9678C4.88218 17.9254 4.95935 17.887 5.03317 17.8524C6.76347 19.4748 9.86991 20 11.7501 20C13.6302 20 16.7367 19.4748 18.467 17.8524C18.5408 17.887 18.6179 17.9254 18.6981 17.9678C19.0401 18.1485 19.3538 18.3533 19.5991 18.5134C19.6454 18.5436 19.6892 18.5722 19.7303 18.5988C20.0783 18.8235 20.5425 18.7236 20.7673 18.3756C20.992 18.0277 20.8921 17.5634 20.5441 17.3387C20.511 17.3173 20.4732 17.2926 20.4312 17.2652C20.1888 17.1067 19.8086 16.8581 19.3989 16.6416L19.3754 16.6292C19.5461 16.2683 19.6609 15.8724 19.7072 15.4385C19.783 15.463 19.8592 15.4883 19.9352 15.5144C20.6223 15.7493 21.1874 15.9979 21.3436 16.0988C21.6915 16.3235 22.1558 16.2236 22.3805 15.8756C22.6052 15.5277 22.5053 15.0634 22.1574 14.8387C21.8297 14.6271 21.1044 14.3289 20.4205 14.095C20.1997 14.0195 19.9722 13.947 19.7492 13.8825C19.7605 12.7785 19.6769 11.6382 18.8494 10.6602C19.5494 11.0634 19.7282 9.55469 19.7302 9.0625V7.18761C19.7302 5.56261 18.6129 5.00011 17.6553 5.00011C16.6977 5.00011 14.7825 6.5625 14.1441 6.5625C13.378 6.5625 13.2305 6.40636 11.7501 6.40636ZM11.0745 15.6004C11.2771 15.5314 11.5162 15.5 11.7501 15.5C11.984 15.5 12.2231 15.5314 12.4257 15.6004C12.5251 15.6342 12.6467 15.6876 12.7537 15.7738C12.8612 15.8603 13.0001 16.0206 13.0001 16.25C13.0001 16.4794 12.8612 16.6397 12.7537 16.7262C12.6467 16.8124 12.5251 16.8658 12.4257 16.8996C12.2231 16.9686 11.984 17 11.7501 17C11.5162 17 11.2771 16.9686 11.0745 16.8996C10.9751 16.8658 10.8535 16.8124 10.7464 16.7262C10.6389 16.6397 10.5001 16.4794 10.5001 16.25C10.5001 16.0206 10.6389 15.8603 10.7464 15.7738C10.8535 15.6876 10.9751 15.6342 11.0745 15.6004ZM13.9201 12.5005C14.0566 12.2721 14.326 12 14.7301 12C15.1342 12 15.4036 12.2721 15.54 12.5005C15.6823 12.7387 15.7501 13.0274 15.7501 13.3125C15.7501 13.5976 15.6823 13.8863 15.54 14.1245C15.4036 14.3529 15.1342 14.625 14.7301 14.625C14.326 14.625 14.0566 14.3529 13.9201 14.1245C13.7778 13.8863 13.7101 13.5976 13.7101 13.3125C13.7101 13.0274 13.7778 12.7387 13.9201 12.5005ZM7.96016 12.5005C8.09658 12.2721 8.36599 12 8.7701 12C9.17421 12 9.44362 12.2721 9.58004 12.5005C9.72234 12.7387 9.79011 13.0274 9.79011 13.3125C9.79011 13.5976 9.72234 13.8863 9.58004 14.1245C9.44362 14.3529 9.17421 14.625 8.7701 14.625C8.36599 14.625 8.09658 14.3529 7.96016 14.1245C7.81786 13.8863 7.75009 13.5976 7.75009 13.3125C7.75009 13.0274 7.81786 12.7387 7.96016 12.5005Z"
+              fill="#A64D79"></path>
+          </svg>
+        </div>
+        <div id="friends" data-target="friends" class="nav-item">
+          <svg
+            width="50px"
+            height="34px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.5 13.2871C14.0251 10.5713 11 12.5746 11 15.3995C11 17.9583 12.814 19.4344 14.3584 20.6912L14.4018 20.7265C14.5474 20.8449 14.6903 20.9615 14.829 21.0769C15.4 21.5523 15.95 22 16.5 22C17.05 22 17.6 21.5523 18.171 21.0769C19.7893 19.7296 22 18.2243 22 15.3995C22 14.4715 21.6735 13.6321 21.1474 13.0197C20.0718 11.7677 18.1619 11.4635 16.5 13.2871Z"
+              fill="#A64D79"></path>
+            <path
+              d="M8.10627 18.2468C5.29819 16.0833 2 13.5422 2 9.1371C2 4.27416 7.50016 0.825464 12 5.50063C16.4998 0.825464 22 4.27416 22 9.1371C22 9.97067 21.8819 10.7375 21.6714 11.4477C20.9524 10.8701 20.051 10.5056 19.052 10.5C18.162 10.495 17.2936 10.7745 16.4988 11.3101C15.1099 10.3773 13.5429 10.2518 12.1698 10.9147C10.5345 11.7042 9.5 13.4705 9.5 15.3994C9.5 17.7046 10.6485 19.3217 11.8415 20.4937C10.8942 20.4184 9.94514 19.6861 8.96173 18.9109C8.68471 18.6925 8.39814 18.4717 8.10627 18.2468Z"
+              fill="#A64D79"></path>
+          </svg>
+        </div>
+        <div id="photos" data-target="photos" class="nav-item">
+          <svg
+            width="50px"
+            height="34px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.2905 11.9687C17.2905 12.7073 16.6984 13.3062 15.9679 13.3062C15.2374 13.3062 14.6453 12.7073 14.6453 11.9687C14.6453 11.23 15.2374 10.6311 15.9679 10.6311C16.6984 10.6311 17.2905 11.23 17.2905 11.9687Z"
+              fill="#A64D79"></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.1316 7.40799C17.2832 7.28732 16.1897 7.28734 14.8267 7.28736H9.17326C7.81031 7.28734 6.7168 7.28732 5.86839 7.40799C4.99062 7.53283 4.25955 7.80072 3.71603 8.42851C3.17252 9.05629 3.00655 9.82451 3.00019 10.7209C2.99404 11.5872 3.13858 12.6834 3.31873 14.0496L3.68419 16.8214C3.825 17.8895 3.93897 18.7539 4.11616 19.4309C4.3006 20.1355 4.57289 20.7197 5.08383 21.172C5.59477 21.6244 6.20337 21.8201 6.91841 21.9119C7.60534 22 8.46777 22 9.53332 22H14.4667C15.5322 22 16.3947 22 17.0816 21.9119C17.7966 21.8201 18.4052 21.6244 18.9162 21.172C19.4271 20.7197 19.6994 20.1355 19.8838 19.4309C20.061 18.7539 20.175 17.8894 20.3158 16.8213L20.6813 14.0496C20.8614 12.6834 21.006 11.5872 20.9998 10.7209C20.9934 9.82451 20.8275 9.05629 20.284 8.42851C19.7404 7.80072 19.0094 7.53283 18.1316 7.40799ZM6.05259 8.73247C5.32568 8.83585 4.95802 9.02442 4.71116 9.30956C4.4643 9.5947 4.32805 9.98816 4.32278 10.7305C4.31738 11.4918 4.44802 12.4945 4.63662 13.9249L4.68663 14.3042L5.05822 14.032C6.0171 13.3297 7.43388 13.3643 8.34576 14.1275L11.7301 16.9603C12.0499 17.228 12.6011 17.2781 12.9989 17.0441L13.2341 16.9057C14.3594 16.2437 15.8676 16.3135 16.9059 17.0958L18.7378 18.4758C18.8281 17.9802 18.909 17.3709 19.0107 16.5999L19.3634 13.9249C19.552 12.4945 19.6826 11.4918 19.6772 10.7305C19.6719 9.98816 19.5357 9.5947 19.2888 9.30956C19.042 9.02442 18.6743 8.83585 17.9474 8.73247C17.2019 8.62643 16.2018 8.62487 14.7748 8.62487H9.22521C7.79821 8.62487 6.7981 8.62643 6.05259 8.73247Z"
+              fill="#A64D79"></path>
+            <path
+              d="M8.85886 2.00001H15.141C15.3502 1.99995 15.5106 1.99991 15.6508 2.01515C16.6479 2.12351 17.4639 2.78957 17.81 3.68676H6.18981C6.53588 2.78957 7.35195 2.12351 8.34899 2.01515C8.48922 1.99991 8.64963 1.99995 8.85886 2.00001Z"
+              fill="#A64D79"></path>
+            <path
+              d="M6.87943 4.5C5.62786 4.5 4.60163 5.33974 4.25915 6.45377C4.25201 6.477 4.24517 6.50034 4.23862 6.5238C4.59696 6.40323 4.96989 6.32446 5.34741 6.27068C6.31974 6.13218 7.54855 6.13225 8.97598 6.13234L9.08258 6.13234L15.1789 6.13234C16.6063 6.13225 17.8351 6.13218 18.8074 6.27068C19.185 6.32446 19.5579 6.40323 19.9162 6.5238C19.9097 6.50034 19.9028 6.477 19.8957 6.45377C19.5532 5.33974 18.527 4.5 17.2754 4.5H6.87943Z"
+              fill="#A64D79"></path>
+          </svg>
+        </div>
+      </nav>
+      <section id="component-container" class="outline outline-[#0f0f0f2c] relative">
+        <Aboutme client:load />
+        <Friends />
+        <slot />
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  @reference "tailwindcss";
+
+  html,
+  body {
+    @apply m-0 p-0 box-border w-screen h-screen bg-[#141414] bg-[url('/public/background.png')] text-[#cacaca] grid place-items-start justify-items-center
+  }
+
+  nav > div {
+    @apply w-[55px] h-[63px] rounded-[9px] flex justify-center items-center cursor-pointer outline outline-[#3b1c32];
+  }
+  nav > #about {
+    @apply rounded-tl-[35px];
+  }
+
+  .nav-item {
+    @apply backdrop-blur-lg bg-transparent transition-all duration-75 ease-in-out;
+  }
+
+  nav > #photos {
+    @apply rounded-tr-[35px];
+  }
+  #component-container {
+    @apply w-[345px] bg-[#3B1C32] rounded-2xl mx-auto z-11 relative  font-[Jaini_Purva] md:w-200 md:mx-0;
+  }
+
+  body > p > span {
+    @apply text-[#603859] mx-3 font-bold text-2xl;
+  }
+  body p:nth-child(3) span:nth-child(1)::before {
+    content: "🧉";
+    -webkit-text-fill-color: initial;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    margin-inline: 20px;
+  }
+  body p:nth-child(3) span:nth-child(3)::after {
+    content: "🧉";
+    -webkit-text-fill-color: initial;
+    font-size: 20px;
+    right: 0;
+    position: absolute;
+    margin-inline: 20px;
+  }
+  body p:nth-child(3)::before {
+    content: "";
+  }
+  body p:nth-child(3) {
+    position: relative;
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+  }
+  body p:nth-child(3)::before {
+    @apply w-full absolute h-30 backdrop-blur-[20px] -z-1 transform -translate-y-20;
+  }
+  body p:nth-child(3) span {
+    background: linear-gradient(
+      to bottom,
+      #6cace4 0%,
+      #ffffff 50%,
+      #6cace4 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
+
+<script>
+import { gsap } from "gsap";
+
+// Variables globales
+let activeAnimation: gsap.core.Tween | null = null;
+let isAnimating: boolean = false;
+
+// Esperar a que el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', function() {
+  const friends = document.querySelector("#component-container > [data-target='friends']") as HTMLElement;
+  const containerItems = document.querySelector("#component-container") as HTMLElement;
+  const items = document.querySelectorAll("#component-container > *");
+  const navItems = document.querySelectorAll(".nav-item");
+  
+  // Ocultar todos los componentes excepto Aboutme inicialmente
+  items.forEach((item: Element) => {
+    if (!item.hasAttribute('client:load') && !item.classList.contains('hidden')) {
+      item.classList.add('hidden');
+    }
+  });
+  
+  // Actualizar el fondo inicial
+  updateContainerBackground();
+
+  // Función para actualizar el fondo del contenedor
+  function updateContainerBackground(): void {
+    const friendsVisible = friends && !friends.classList.contains('hidden');
+    if (friendsVisible) {
+      containerItems.style.background = "url('public/pattern.png') repeat";
+      containerItems.style.backgroundSize = "auto"; // Para que el patrón se repita
+    } else {
+      containerItems.style.background = "#3B1C32";
+    }
+  }
+
+  // Función mejorada para mostrar contenido
+  async function showContent(clickedId: string): Promise<void> {
+    if (isAnimating) return; // Evitar múltiples clics
+    isAnimating = true;
+    
+    const elements = Array.from(items) as HTMLElement[];
+    const visible = elements.find(e => !e.classList.contains('hidden'));
+    
+    // Si hay un elemento visible, animar su salida
+    if (visible) {
+      await gsap.to(visible, {
+        duration: 0.3,
+        x: 20,
+        opacity: 0,
+        ease: "power2.in"
+      });
+      visible.classList.add('hidden');
+      gsap.set(visible, { x: 0 }); // Reset position
+    }
+    
+    // Encontrar y mostrar el elemento objetivo
+    let targetElement: HTMLElement | undefined;
+    
+    // Buscar por data-target o id
+    if (clickedId === 'about') {
+      targetElement = document.querySelector('#component-container > :first-child') as HTMLElement;
+    } else {
+      targetElement = elements.find(el => 
+        el.dataset.target === clickedId || el.id === clickedId
+      );
+    }
+    
+    if (targetElement) {
+      targetElement.classList.remove('hidden');
+      gsap.set(targetElement, { x: -20, opacity: 0 });
+      
+      await gsap.to(targetElement, {
+        duration: 0.4,
+        x: 0,
+        opacity: 1,
+        ease: "power2.out"
+      });
+    }
+    
+    // Actualizar el fondo después de cambiar el contenido
+    updateContainerBackground();
+    isAnimating = false;
+  }
+
+  // Función mejorada para manejar clics en navegación
+  function handleNavClick(event: Event): void {
+    const clickedElement = event.currentTarget as HTMLElement;
+    const clickedId = clickedElement.id;
+    
+    // Detener animación actual si existe
+    if (activeAnimation) {
+      activeAnimation.kill();
+    }
+    
+    // Remover estilos activos de todos los elementos
+    navItems.forEach((item: Element) => {
+      gsap.to(item, {
+        duration: 0.2,
+		zIndex: 10,
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        overwrite: true
+      });
+    });
+    
+    // Aplicar estilos al elemento clickeado
+    gsap.to(clickedElement, {
+      duration: 0.2,
+	  zIndex: 20,
+      backgroundColor: "#CACACA",
+      boxShadow: "0 0 15px rgba(255, 107, 157, 0.5)",
+      overwrite: true
+    });
+    
+    // Animación de elevación
+    activeAnimation = gsap.to(clickedElement, {
+      y: -15,
+      duration: 0.2,
+      ease: "power2.out",
+      onComplete: () => {
+        gsap.to(clickedElement, {
+          y: 0,
+          duration: 0.4,
+          ease: "elastic.out(1, 0.5)",
+          onComplete: () => {
+            activeAnimation = null;
+          }
+        });
+      }
+    });
+    
+    // Mostrar el contenido correspondiente
+    showContent(clickedId);
+  }
+
+  // Añadir event listeners a todos los elementos de navegación
+  navItems.forEach((item: Element) => {
+    item.addEventListener("click", handleNavClick);
+  });
+});
+</script>

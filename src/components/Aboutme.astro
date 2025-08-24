@@ -1,0 +1,121 @@
+---
+import "../styles/global.css";
+import { MapPin } from "@lucide/astro";
+---
+
+<div class="about hidden px-3 py-7 text-[20px]" data-target="about">
+  <span class="flex justify-between"
+    ><span class="text-3xl">Martina</span><span class="textsecondary"
+      >25 años</span
+    ></span
+  >
+  <div class="flex items-center textsecondary gap-1">
+    <MapPin size={"14px"} /><span>Argentina</span>
+  </div>
+  <span class="text-2xl linesTitle mt-2">Sobre mi</span>
+  <p class="textsecondary tracking-widest w-58" id="show">
+    Soy una escritora y poeta nacida en la melancolía porteña. Vivo entre libros
+    antiguos, cafés que huelen a nostalgia y calles que susurran historias no
+    contadas. Mi arte nace de la contemplación de lo cotidiano transformado en
+    extraordinario, de la belleza que se esconde en los rincones más oscuros del
+    alma humana.
+  </p>
+  <button id="leerMas" class="cursor-pointer"
+    ><span id="buttonText">Leer mas</span></button
+  >
+
+  <div class="poema-contenedor flex justify-center bg-[url(/public/background.png)] backdrop-blur-2xl items-center flex-col my-10 mx-auto p-8 shadow-2xl rounded-[20px_7em] relative">
+<h1 class="text-4xl text-[#cacaca] font-extrabold">Bajo la lluvia de tus ojos</h1>
+<div class="poema tracking-widest w-[calc(var(--spacing)*55)] leading-[33px] mt-[22px] md:w-147 shadow-md">
+Bajo la lluvia de tus ojos,
+mi silencio aprende a latir como un nombre antiguo;
+as horas se deshilachan en la vendimia del viento,
+y en cada rincón donde se esconde la tarde
+nace un mapa de esperas que me guía
+hacia la calma de tu sonrisa.
+</div>
+<div class="autor self-end italic text-[#3f3f3f] tracking-[10px] absolute bottom-0 ">—Anonimo<div>
+  </div>
+</div>
+
+
+
+<style>
+
+  @reference "tailwindcss";
+  .textsecondary {
+    @apply text-[#fbddeca6] tracking-widest text-[1rem];
+  text-shadow: 0px 0px 1px #1c161a;
+  }
+  .linesTitle {
+    @apply line-clamp-3;
+  }
+
+  /* Estilos para la animación */
+  #show {
+    overflow: hidden;
+    height: 4.5em;
+  }
+
+  #leerMas {
+    transition: color 0.3s ease;
+  }
+
+  #leerMas:hover {
+    color: #f2b9d6;
+  }
+</style>
+
+<script>
+  import { gsap } from "gsap";
+
+  const show: HTMLElement | null = document.getElementById("show");
+  const leerMas: HTMLElement | null = document.getElementById("leerMas");
+  const buttonText: HTMLElement | null = document.getElementById("buttonText");
+  let isExpanded: boolean = false;
+
+  // Verificar que todos los elementos existen antes de continuar
+  if (show && leerMas && buttonText) {
+    // Animación de entrada inicial
+    gsap.to(show, {
+      opacity: 1,
+      duration: 1.5,
+      ease: "power2.inOut",
+      delay: 0.5,
+    });
+
+    // Función para expandir/contraer el texto
+    leerMas.addEventListener("click", () => {
+      if (!isExpanded) {
+        // Expandir
+        gsap.to(show, {
+          height: "auto",
+          duration: 1.2,
+          ease: "power2.inOut",
+          onStart: () => {
+            if (buttonText) {
+              buttonText.textContent = "Leer menos";
+            }
+          },
+        });
+      } else {
+        // Contraer
+        gsap.to(show, {
+          height: "4.5em",
+          duration: 1.2,
+          ease: "power2.inOut",
+          onStart: () => {
+            if (buttonText) {
+              buttonText.textContent = "Leer mas";
+            }
+          },
+        });
+      }
+      isExpanded = !isExpanded;
+    });
+  } else {
+    console.error(
+      "No se pudieron encontrar todos los elementos necesarios para la animación"
+    );
+  }
+</script>

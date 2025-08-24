@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+
+const martFriends = [
+  {name:"elAmigo", img: "public/avatar 1.webp"},
+  {name:"elAmigo", img: "public/avatar.webp"},
+  {name:"elAmigo", img: "public/avatar 2.webp"},
+  {name:"elAmigo", img: "public/avatar 3.webp"},
+  {name:"elAmigo", img: "public/avatar 4.webp"},
+  {name:"elAmigo", img: "public/avatar 5.webp"},
+]
+---
+
+<div class="hidden h-full" data-target="friends">
+
+   <div class="grid grid-cols-2 h-full md:mask-none  overflow-scroll scroll-smooth gap-20 w-full px-3 py-7 mask-[url(/public/Rectangulo.svg)] mask-no-repeat mask-cover">
+    {
+  martFriends.map(friend => (
+    <div class="memorial-card">
+    <div class="photo-container">
+      <img
+        src={friend.img}
+        alt={friend.name}
+        class="memorial-photo mx-auto rounded-[27px] outline outline-[#141414] shadow-md"
+      />
+    </div>
+    <div class="name-plate mt-2">
+      <h3 class="person-name text-center tracking-widest font-[Knewave]">{friend.name}</h3>
+    </div>
+  </div>
+  ))
+}
+ </div>
+</div>
+
