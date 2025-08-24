@@ -104,8 +104,8 @@ import Friends from "../components/Friends.astro";
         </div>
       </nav>
       <section id="component-container" class="outline outline-[#0f0f0f2c] relative mb-20">
-        <Aboutme client:load />
-        <Friends />
+        <Aboutme/>
+        <Friends/>
         <slot />
       </section>
     </main>
@@ -117,7 +117,7 @@ import Friends from "../components/Friends.astro";
 
   html,
   body {
-    @apply m-0 p-0 box-border w-screen h-screen bg-[#141414] bg-[url('/public/background.png')] text-[#cacaca] grid place-items-start justify-items-center
+    @apply m-0 p-0 box-border w-screen h-screen bg-[#141414] bg-[url('/background.png')] text-[#cacaca] grid place-items-start justify-items-center
   }
 
   nav > div {
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Ocultar todos los componentes excepto Aboutme inicialmente
   items.forEach((item: Element) => {
-    if (!item.hasAttribute('client:load') && !item.classList.contains('hidden')) {
+    if (!item.classList.contains('hidden')) {
       item.classList.add('hidden');
     }
   });
