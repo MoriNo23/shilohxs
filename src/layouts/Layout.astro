@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateContainerBackground(): void {
     const friendsVisible = friends && !friends.classList.contains('hidden');
     if (friendsVisible) {
-      containerItems.style.background = "url('public/pattern.png') repeat";
+      containerItems.style.background = "url('/pattern.png') repeat";
       containerItems.style.backgroundSize = "auto"; // Para que el patrón se repita
     } else {
       containerItems.style.background = "#3B1C32";
