@@ -2,18 +2,18 @@
 import "../styles/global.css";
 
 const martFriends = [
-  {name:"elAmigo", img: "/public/avatar 1.webp"},
-  {name:"elAmigo", img: "/public/avatar.webp"},
-  {name:"elAmigo", img: "/public/avatar 2.webp"},
-  {name:"elAmigo", img: "/public/avatar 3.webp"},
-  {name:"elAmigo", img: "/public/avatar 4.webp"},
-  {name:"elAmigo", img: "/public/avatar 5.webp"},
+  {name:"elAmigo", img: "./avatar 1.webp"},
+  {name:"elAmigo", img: "./avatar.webp"},
+  {name:"elAmigo", img: "./avatar 2.webp"},
+  {name:"elAmigo", img: "./avatar 3.webp"},
+  {name:"elAmigo", img: "./avatar 4.webp"},
+  {name:"elAmigo", img: "./avatar 5.webp"},
 ]
 ---
 
-<div class="hidden h-full" data-target="friends">
+<div class="hidden h-full px-20" data-target="friends">
 
-   <div class="grid grid-cols-2 h-full md:mask-none  overflow-scroll scroll-smooth gap-20 w-full px-3 py-7 mask-[url(/public/Rectangulo.svg)] mask-no-repeat mask-cover">
+   <div class="grid grid-cols-2 h-full md:mask-none  overflow-scroll scroll-smooth gap-20 w-full px-3 py-7 mask-[url(./Rectangulo.svg)] mask-no-repeat mask-cover">
     {
   martFriends.map(friend => (
     <div class="memorial-card">
