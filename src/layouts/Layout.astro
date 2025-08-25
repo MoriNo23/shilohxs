@@ -28,7 +28,7 @@ import Friends from "../components/Friends.astro";
       > Yalnızlık
     </p>
     <section
-      class="relative bg-[#3B1C32] w-[345px] h-[143px] rounded-3xl mt-10 flex justify-center md:w-200"
+      class="relative bg-[url('/bannermaq.png')] w-[345px] h-[143px] rounded-3xl mt-10 flex justify-center md:w-200"
     >
       <span class="font-[Knewave] text-[47px] absolute -top-10"
         >szascetisme</span
@@ -145,7 +145,6 @@ import Friends from "../components/Friends.astro";
     content: "🧉";
     -webkit-text-fill-color: initial;
     font-size: 20px;
-    position: absolute;
     left: 0;
     margin-inline: 20px;
   }
@@ -154,16 +153,7 @@ import Friends from "../components/Friends.astro";
     -webkit-text-fill-color: initial;
     font-size: 20px;
     right: 0;
-    position: absolute;
     margin-inline: 20px;
-  }
-  body p:nth-child(3)::before {
-    content: "";
-  }
-  body p:nth-child(3) {
-    position: relative;
-    backdrop-filter: blur(20px);
-    border-radius: 16px;
   }
   body p:nth-child(3)::before {
     @apply w-full absolute h-30 backdrop-blur-[20px] -z-1 transform -translate-y-20;
