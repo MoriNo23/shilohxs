@@ -3,30 +3,30 @@ import "../styles/global.css";
 import { MapPin } from "@lucide/astro";
 ---
 
-<div class="about hidden px-11 py-7 text-[20px]" data-target="about">
-  <span class="flex justify-between"
+<div class="about hidden pt-7 text-[20px]" data-target="about">
+  <span class="flex justify-between px-11"
     ><span class="text-3xl">Martina</span><span class="textsecondary"
       >25 años</span
     ></span
   >
-  <div class="flex items-center textsecondary gap-1">
+  <div class="flex items-center textsecondary gap-1 px-11">
     <MapPin size={"14px"} /><span>Argentina</span>
   </div>
-  <span class="text-2xl linesTitle mt-2">Sobre mi</span>
-  <p class="textsecondary tracking-widest w-58" id="show">
+  <span class="text-2xl linesTitle mt-2 px-11">Sobre mi</span>
+  <p class="textsecondary tracking-widest px-11 md:w-[37rem]" id="show">
     Soy una escritora y poeta nacida en la melancolía porteña. Vivo entre libros
     antiguos, cafés que huelen a nostalgia y calles que susurran historias no
     contadas. Mi arte nace de la contemplación de lo cotidiano transformado en
     extraordinario, de la belleza que se esconde en los rincones más oscuros del
     alma humana.
   </p>
-  <button id="leerMas" class="cursor-pointer"
+  <button id="leerMas" class="cursor-pointer px-11"
     ><span id="buttonText">Leer mas</span></button
   >
 
-  <div class="poema-contenedor flex justify-center bg-[url(/background.png)] backdrop-blur-2xl items-center flex-col my-10 mx-auto p-8 shadow-2xl rounded-[20px_7em] relative">
-<h1 class="text-4xl text-[#cacaca] font-extrabold">Bajo la lluvia de tus ojos</h1>
-<div class="poema tracking-widest w-[calc(var(--spacing)*55)] leading-[33px] mt-[22px] md:w-147 shadow-md">
+  <div class="poema-contenedor flex backdrop-blur-2xl gap-[1.5rem] flex-col mt-10 p-8 relative w-full bg-[#00000085] font-[Knewave] rounded-b-2xl">
+<h1 class="text-3xl font-extrabold tracking-wide">Bajo la lluvia de tus ojos</h1>
+<div class="font-light text-[#acacaceb] w-[18rem] md:w-[25rem] bg-[linear-gradient(to_bottom,#3b1c32,transparent)] p-[1rem]">
 Bajo la lluvia de tus ojos,
 mi silencio aprende a latir como un nombre antiguo;
 as horas se deshilachan en la vendimia del viento,
@@ -34,7 +34,7 @@ y en cada rincón donde se esconde la tarde
 nace un mapa de esperas que me guía
 hacia la calma de tu sonrisa.
 </div>
-<div class="autor self-end italic text-[#3f3f3f] tracking-[10px] absolute bottom-0 ">—Anonimo<div>
+<div class="autor self-end tracking-[10px]">—Anonimo<div>
   </div>
 </div>
 
@@ -44,7 +44,7 @@ hacia la calma de tu sonrisa.
 
   @reference "tailwindcss";
   .textsecondary {
-    @apply text-[#fbddeca6] tracking-widest text-[1rem];
+    @apply text-[#fbddecdb] tracking-widest text-[1rem];
   text-shadow: 0px 0px 1px #1c161a;
   }
   .linesTitle {
@@ -74,9 +74,11 @@ hacia la calma de tu sonrisa.
   const buttonText: HTMLElement | null = document.getElementById("buttonText");
   let isExpanded: boolean = false;
 
+  
   // Verificar que todos los elementos existen antes de continuar
   if (show && leerMas && buttonText) {
-    // Animación de entrada inicial
+    const textoparrafo: string = show.textContent;
+    show.textContent = show.textContent.slice(0, 100) + "...";
     gsap.to(show, {
       opacity: 1,
       duration: 1.5,
@@ -88,11 +90,12 @@ hacia la calma de tu sonrisa.
     leerMas.addEventListener("click", () => {
       if (!isExpanded) {
         // Expandir
+        show.textContent = textoparrafo;
         gsap.to(show, {
           height: "auto",
-          duration: 1.2,
+          duration: 0.5,
           ease: "power2.inOut",
-          onStart: () => {
+          onComplete: () => {
             if (buttonText) {
               buttonText.textContent = "Leer menos";
             }
@@ -102,11 +105,12 @@ hacia la calma de tu sonrisa.
         // Contraer
         gsap.to(show, {
           height: "4.5em",
-          duration: 1.2,
+          duration: 0.5,
           ease: "power2.inOut",
-          onStart: () => {
+          onComplete: () => {
             if (buttonText) {
               buttonText.textContent = "Leer mas";
+              show.textContent = show.textContent.slice(0, 100) + "...";
             }
           },
         });

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Aboutme from "../components/Aboutme.astro";
 import Friends from "../components/Friends.astro";
+import Photos from "../components/Photos.astro";
 ---
 
 <!doctype html>
@@ -22,17 +23,18 @@ import Friends from "../components/Friends.astro";
     <title>szascetisme-space</title>
   </head>
   <body>
-    <p class="font-[Jaini_Purva] text-[#aaa] w-[345px] text-center md:w-200 md:flex md:justify-between">
+    <p class="font-[Jaini_Purva] text-[#aaa] w-[345px] px-1 text-center md:w-200 md:flex md:justify-between">
       Hüzün <span>/</span> Aşk <span>/</span> Hasret <span>/</span> Dert <span
         >/</span
       > Yalnızlık
     </p>
     <section
-      class="relative bg-[url('/bannermaq2.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/bannermaq.png')] w-[345px] h-[143px] rounded-3xl mt-10 flex justify-center md:w-200"
+      class="relative bg-[url('/banner.png')] bg-cover bg-center bg-no-repeat md:bg-[url('/banner-desktop.png')] w-[345px] h-[143px] rounded-3xl mt-10 flex justify-center md:w-200 bg-[#4E143D]"
     >
-      <span class="font-[Knewave] text-[47px] absolute -top-10"
+      <span class="font-[Knewave] text-[47px] absolute -top-10 z-10"
         >szascetisme</span
       >
+      <div class="banner-foto bg-[url(/foto-banner.png)] md:bg-[url(/foto-banner-desktop.png)] bg-no-repeat bg-cover bg-center md:rounded-none md:relative w-[145px] h-[145px] absolute left-0 rounded-l-3xl"></div>
     </section>
     <p
       class="font-[Jaini_Purva] w-[345px] text-[64px] text-center flex gap-2 justify-center md:w-200"
@@ -106,6 +108,8 @@ import Friends from "../components/Friends.astro";
       <section id="component-container" class="outline outline-[#0f0f0f2c] relative mb-20">
         <Aboutme/>
         <Friends/>
+        <Photos/>
+
         <slot />
       </section>
     </main>

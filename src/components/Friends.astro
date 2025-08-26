@@ -11,9 +11,9 @@ const martFriends = [
 ]
 ---
 
-<div class="hidden h-full md:px-20" data-target="friends">
+<div class="hidden h-[34.375rem]" data-target="friends">
 
-   <div class="grid grid-cols-2 h-full md:mask-none  overflow-scroll scroll-smooth gap-20 w-full px-3 py-7">
+   <div class="grid grid-cols-2 h-[30rem] px-[3rem] py-[4rem] md:mask-none  overflow-scroll scroll-smooth gap-20 w-full md:px-20">
     {
   martFriends.map(friend => (
     <div class="memorial-card">
@@ -25,7 +25,7 @@ const martFriends = [
       />
     </div>
     <div class="name-plate mt-2">
-      <h3 class="person-name text-center tracking-widest font-[Knewave]">{friend.name}</h3>
+      <h3 class="person-name text-center tracking-widest font-[Knewave] md:text-[1.3rem]">{friend.name}</h3>
     </div>
   </div>
   ))
